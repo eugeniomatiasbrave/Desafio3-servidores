@@ -1,0 +1,7 @@
+[
+{"id":1,"title":"shorts","description":"T. XL","price":1000,"thumbnail":"thumbnail 1","code":"abc124","stock":20},
+{"id":2,"title":"shirt","description":"T. SL","price":2000,"thumbnail":"thumbnail 2","code":"abc125","stock":30},
+{"id":3,"title":"blue jean","description":"T. ML","price":8500,"thumbnail":"thumbnail 3","code":"abc126","stock":60},
+{"id":4,"title":"blue jean 2","description":"T. ML","price":4500,"thumbnail":"thumbnail 4","code":"abc127","stock":80},
+{"id":5,"title":"blue jean 3","description":"T. ML","price":6500,"thumbnail":"thumbnail 5","code":"abc128","stock":100}
+]
