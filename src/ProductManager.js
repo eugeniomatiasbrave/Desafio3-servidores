@@ -1,25 +1,26 @@
-const fs = require ("fs");
-
-export class ProductManager {
-
-    #products;
-    #id;
+import fs from "fs";
+ 
+export default class ProductManager {
     constructor() { 
         this.patch = "./productos.json"; 
-        this.#products = []; 
-        //this.#id = 0;   
+        this.products = []; 
+        this.id = 0;   
     };
 
     createId(){
-		return ++this.#id;
+		return ++this.id;
 	};
 
     addProduct = async ( title, description, price, thumbnail, code, stock)=> {  
-       let newproducts= { id: this.#createId() , title, description, price, thumbnail, code, stock };
-       this.#products.push(newproducts) // guardo el objeto en array vacio.
-       const productsString = JSON.stringify(this.#products);  // guardo en formato string
+       let newproducts= { id: this.createId() , title, description, price, thumbnail, code, stock };
+       this.products.push(newproducts) // guardo el objeto en array vacio.
+       const productsString = JSON.stringify(this.products);  // guardo en formato string
        await fs.promises.writeFile(this.patch, productsString); // guardo en archivo.JSON
     };
+
+    //readProduct = async ()=> {
+
+    //}
 
     getProducts = async () => {
         const productsFile = await fs.promises.readFile(this.patch, "utf-8");
@@ -62,7 +63,7 @@ export class ProductManager {
     };
 };
 
-const productM = new ProductManager(); 
+
 
 
 

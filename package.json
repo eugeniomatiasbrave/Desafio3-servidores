@@ -2,9 +2,10 @@
   "name": "servidorexpress",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "",
+  "type": "module",
   "scripts": {
-    "start": "nodemon server.js" 
+    "start": "node ./src/app.js" 
   },
   "keywords": [],
   "author": "",

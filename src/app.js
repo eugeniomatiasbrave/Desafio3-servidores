@@ -1,9 +1,15 @@
-
-const express = require('express')
-import { ProductManager } from './ProductManager';
-
+import express from "express";
+import ProductManager from "./ProductManager.js";
 
 const app = express();
-const port = 8080;
+app.use(express.urlencoded({ extended: true }));
+
+const productM = new ProductManager()
+
+const getProducts= productM.getProducts()
+
+console.log(await getProducts)
+
+//const port = 8080;
 
 
