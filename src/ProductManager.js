@@ -34,7 +34,7 @@ export default class ProductManager {
     getProductById = async(id)=> {
         const productsFile = await fs.promises.readFile(this.patch, "utf-8");  
         const prodRead = JSON.parse(productsFile);
-
+       
         const searching = prodRead.find(prod => prod.id === id); // en busca de UN ID.
         searching??console.log("Not found");  // si no lo encuentra , respuesta no encontrado. Uso ternario.      
     };  
