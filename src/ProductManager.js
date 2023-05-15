@@ -18,12 +18,15 @@ export default class ProductManager {
        await fs.promises.writeFile(this.patch, productsString); // guardo en archivo.JSON
     };
 
-    //readProduct = async ()=> {
+    
 
-    //}
+    readProducts= async ()=> {
+      let resp = await fs.promises.readFile (this.patch, "utf-8");
+      return JSON.parse(resp);
+    };
 
     getProducts = async () => {
-        const productsFile = await fs.promises.readFile(this.patch, "utf-8");
+        const productsFile = await fs.promises.readFile (this.patch, "utf-8");
         const prodRead = JSON.parse(productsFile); // paso el string en formato objeto.
         console.log(prodRead)
     }; 

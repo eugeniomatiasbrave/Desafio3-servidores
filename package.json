@@ -2,7 +2,7 @@
   "name": "servidorexpress",
   "version": "1.0.0",
   "description": "",
-  "main": "",
+  "main": "app.js",
   "type": "module",
   "scripts": {
     "start": "nodemon ./src/app.js" 
