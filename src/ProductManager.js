@@ -65,21 +65,3 @@ export default class ProductManager {
        await fs.promises.appendFile(this.patch, JSON.stringify(DB));
     };
 };
-
-
-
-
-
-//productM.addProduct("shorts", "T. XL", 1000, "thumbnail 1", "abc124", 20);
-//productM.addProduct("shirt", "T. SL", 2000, "thumbnail 2", "abc125", 30 ); 
-//productM.addProduct("blue jean", "T. ML", 1000, "thumbnail 3", "abc126",60 );    
-//productM.addProduct("pants", "T. XL", 3000, "thumbnail 4", "abc127", 50 );
-
-///Testeos:
-
-//productM.getProducts(); // Me trae todos los productos del JSON en formato objeto.
-//productM.getProductById(2); // busco el ID que quiero en el JSON parseado.
-//productM.getProductById(8); // ID (8) no encontrado como respuesta.
-//productM.deleteProduct(4) ; // elimino el id (4) usando filter y reescribiendo.
-//productM.addProduct( 3, "blue jean", "T. ML", 1500, "thumbnail 3", "abc126",60)
-//productM.updateProduct(3);
